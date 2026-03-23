@@ -1,7 +1,6 @@
 baseURL = '/'
 languageCode = 'en-us'
 title = 'GraphGuard | Precision Protection Systems'
-theme = ''
 relativeURLs = true
 
 [params]
