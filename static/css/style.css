@@ -173,6 +173,30 @@ a:hover {
     color: var(--steel-light);
 }
 
+/* Hero with Image */
+.hero-with-image {
+    padding: 0;
+    background: var(--steel-dark);
+    position: relative;
+}
+
+.hero-image-container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.hero-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.hero-content {
+    padding: 2rem 0 3rem 0;
+    text-align: center;
+}
+
 /* Placeholders */
 .product-image-placeholder, .image-placeholder, .video-placeholder, .reviews-placeholder {
     background-color: #e2e8f0;
