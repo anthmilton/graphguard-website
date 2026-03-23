@@ -1,0 +1,22 @@
+{{ define "main" }}
+<div class="container page-content">
+    <h1>{{ .Title }}</h1>
+    <div class="content">
+        {{ .Content }}
+    </div>
+    
+    {{ if eq .Section "products" }}
+    <div class="product-grid mt-4">
+        {{ range site.Data.products.products }}
+        <div class="product-card">
+            <div class="product-image-placeholder">[PRODUCT_IMAGE_{{ replace (upper .id) "-" "_" }}]</div>
+            <h3>{{ .name }}</h3>
+            <p class="price">{{ .price }}</p>
+            <a href="{{ .amazonUrl }}" class="btn btn-amazon">Buy on Amazon</a>
+            <a href="/products/{{ .id }}/" class="btn btn-outline">View Details</a>
+        </div>
+        {{ end }}
+    </div>
+    {{ end }}
+</div>
+{{ end }}

@@ -1,0 +1,66 @@
+{{ define "main" }}
+<div class="container product-detail">
+    {{ $productId := .Params.productId }}
+    {{ $product := index (where site.Data.products.products "id" $productId) 0 }}
+    
+    <div class="product-hero">
+        <div class="product-gallery">
+            <div class="product-image-placeholder large">[PRODUCT_IMAGE_{{ replace (upper $product.id) "-" "_" }}]</div>
+        </div>
+        <div class="product-info">
+            <h1>{{ $product.name }}</h1>
+            <p class="price large">{{ $product.price }}</p>
+            <a href="{{ $product.amazonUrl }}" class="btn btn-amazon btn-large">Buy on Amazon</a>
+            
+            <div class="compatibility-list mt-4">
+                <h3>Compatible With:</h3>
+                <ul>
+                    {{ range $product.compatible }}
+                    <li>{{ . }}</li>
+                    {{ end }}
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="product-details-grid mt-5">
+        <div class="features-list">
+            <h3>Key Features</h3>
+            <ul>
+                {{ range $product.features }}
+                <li>{{ . }}</li>
+                {{ end }}
+            </ul>
+        </div>
+        
+        <div class="specs-table">
+            <h3>Specifications</h3>
+            <table>
+                <tr>
+                    <th>Material</th>
+                    <td>Premium Marine-Grade Vinyl</td>
+                </tr>
+                <tr>
+                    <th>Finish</th>
+                    <td>Anti-Glare / Hydrophobic</td>
+                </tr>
+                <tr>
+                    <th>Thickness</th>
+                    <td>0.3mm</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="install-section mt-5">
+        <h3>Installation</h3>
+        <div class="video-placeholder">[YOUTUBE_INSTALL_VIDEO]</div>
+        <p class="text-center mt-2"><a href="/installation/">Read full installation guide</a></p>
+    </div>
+
+    <div class="reviews-section mt-5">
+        <h3>Customer Reviews</h3>
+        <div class="reviews-placeholder">[CUSTOMER_REVIEWS_PLACEHOLDER]</div>
+    </div>
+</div>
+{{ end }}

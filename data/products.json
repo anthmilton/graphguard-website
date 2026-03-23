@@ -1,0 +1,31 @@
+{
+  "products": [
+    {
+      "id": "helix-7",
+      "name": "GraphGuard for Humminbird Helix 7",
+      "model": "Helix 7",
+      "price": "$19.99",
+      "amazonUrl": "[AMAZON_URL_HELIX_7]",
+      "compatible": ["Helix 7 G2", "Helix 7 G3", "Helix 7 G4"],
+      "features": ["Field-tested full season", "Scratch-resistant vinyl", "Water beading", "UV protection", "Touch sensitivity", "Precision-cut fit"]
+    },
+    {
+      "id": "helix-8",
+      "name": "GraphGuard for Humminbird Helix 8",
+      "model": "Helix 8",
+      "price": "$22.99",
+      "amazonUrl": "[AMAZON_URL_HELIX_8]",
+      "compatible": ["Helix 8 G3N", "Helix 8 G4N"],
+      "features": ["Field-tested full season", "Scratch-resistant vinyl", "Water beading", "UV protection", "Touch sensitivity", "Precision-cut fit"]
+    },
+    {
+      "id": "helix-12",
+      "name": "GraphGuard for Humminbird Helix 12",
+      "model": "Helix 12",
+      "price": "$29.99",
+      "amazonUrl": "[AMAZON_URL_HELIX_12]",
+      "compatible": ["Helix 12 G2N", "Helix 12 G3N", "Helix 12 G4N"],
+      "features": ["Field-tested full season", "Scratch-resistant vinyl", "Water beading", "UV protection", "Touch sensitivity", "Precision-cut fit"]
+    }
+  ]
+}

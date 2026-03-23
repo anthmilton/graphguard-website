@@ -1,0 +1,74 @@
+{{ define "main" }}
+<section class="hero">
+    <div class="container">
+        <h1>Protect Your Investment</h1>
+        <p class="subhead">Professional grade screen protection for marine electronics. Precision-cut for a perfect fit.</p>
+        <a href="#products" class="btn btn-primary">Shop Now</a>
+    </div>
+</section>
+
+<section id="products" class="products-section">
+    <div class="container">
+        <h2 class="section-title">Our Products</h2>
+        <div class="product-grid">
+            {{ range site.Data.products.products }}
+            <div class="product-card">
+                <div class="product-image-placeholder">[PRODUCT_IMAGE_{{ replace (upper .id) "-" "_" }}]</div>
+                <h3>{{ .name }}</h3>
+                <p class="price">{{ .price }}</p>
+                <a href="{{ .amazonUrl }}" class="btn btn-amazon">Buy on Amazon</a>
+                <a href="/products/{{ .id }}/" class="btn btn-outline">View Details</a>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</section>
+
+<section class="features-section">
+    <div class="container">
+        <h2 class="section-title">Why GraphGuard?</h2>
+        <div class="features-grid">
+            <div class="feature">
+                <div class="feature-icon">🛡️</div>
+                <h3>Field-Tested</h3>
+                <p>Proven to withstand a full fishing season in harsh marine environments.</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">✨</div>
+                <h3>Scratch-Resistant</h3>
+                <p>Premium materials protect against hooks, sinkers, and daily wear.</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">💧</div>
+                <h3>Water Beading</h3>
+                <p>Hydrophobic finish keeps your screen clear of water spots.</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">☀️</div>
+                <h3>UV Protection</h3>
+                <p>Reduces glare and protects your screen from sun damage.</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">👆</div>
+                <h3>Touch Sensitivity</h3>
+                <p>Maintains 100% of your screen's original touch responsiveness.</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">🎯</div>
+                <h3>Precision-Cut</h3>
+                <p>Engineered for a perfect fit on your specific Humminbird model.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="install-preview">
+    <div class="container">
+        <h2 class="section-title">Easy 2-Minute Install</h2>
+        <div class="video-placeholder">[YOUTUBE_INSTALL_VIDEO]</div>
+        <div class="text-center mt-4">
+            <a href="/installation/" class="btn btn-outline" style="display: inline-block;">View Full Installation Guide</a>
+        </div>
+    </div>
+</section>
+{{ end }}

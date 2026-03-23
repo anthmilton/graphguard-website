@@ -1,0 +1,8 @@
+baseURL = 'https://graphguard.ca/'
+languageCode = 'en-us'
+title = 'GraphGuard | Precision Protection Systems'
+theme = ''
+
+[params]
+  tagline = "Professional Grade Protection"
+  contact_email = "info@graphguard.ca"

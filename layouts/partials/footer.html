@@ -1,0 +1,23 @@
+<footer class="site-footer">
+    <div class="container footer-inner">
+        <div class="footer-brand">
+            <div class="logo">
+                <span class="logo-icon">≈</span>
+                GRAPHGUARD
+            </div>
+            <p>{{ site.Params.tagline }}</p>
+        </div>
+        <div class="footer-links">
+            <a href="/products/">Products</a>
+            <a href="/installation/">Installation</a>
+            <a href="/compatibility/">Compatibility</a>
+            <a href="/about/">About</a>
+        </div>
+        <div class="footer-contact">
+            <p>Contact: <a href="mailto:{{ site.Params.contact_email }}">{{ site.Params.contact_email }}</a></p>
+        </div>
+    </div>
+    <div class="footer-bottom container">
+        <p>&copy; {{ now.Format "2006" }} GraphGuard. All rights reserved.</p>
+    </div>
+</footer>
